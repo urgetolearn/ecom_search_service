@@ -41,3 +41,6 @@ def search_product(query: str):
             for p in results
         ]
     }
+@router.get("/debug/count")
+def get_count():
+    return {"count": len(catalog_service.products)}
